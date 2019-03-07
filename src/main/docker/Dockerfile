@@ -49,11 +49,13 @@ RUN \
 
 COPY generate_deploy_commands.sh ${PAYARA_PATH}/generate_deploy_commands.sh
 COPY startInForeground.sh ${PAYARA_PATH}/bin/startInForeground.sh
+COPY docker-entrypoint.sh /
 
 RUN \
   chown -R payara:payara ${PAYARA_PATH}/generate_deploy_commands.sh \
   && chmod a+x ${PAYARA_PATH}/generate_deploy_commands.sh \
-  && chmod a+x ${PAYARA_PATH}/bin/startInForeground.sh
+  && chmod a+x ${PAYARA_PATH}/bin/startInForeground.sh \
+  && chmod a+x /docker-entrypoint.sh
 
 USER payara
 WORKDIR ${PAYARA_PATH}
@@ -61,4 +63,5 @@ WORKDIR ${PAYARA_PATH}
 # Default payara ports to expose
 EXPOSE 4848 8009 8080 8181
 
-ENTRYPOINT ${PAYARA_PATH}/generate_deploy_commands.sh && ${PAYARA_PATH}/bin/startInForeground.sh --passwordfile=${PAYARA_PASSWORD_FILE} --postbootcommandfile ${POSTBOOT_COMMANDS} ${PAYARA_DOMAIN}
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["start-appserver"]

@@ -13,6 +13,8 @@
 		<docker.organization.name>hmfwpcnj</docker.organization.name>
 		<docker.image.name>${docker.organization.name}/${project.artifactId}</docker.image.name>
         <docker.removeMode>all</docker.removeMode>
+        <docker.cleanup>try</docker.cleanup>
+        <docker.verbose>true</docker.verbose>
     </properties>
     <build>
         <pluginManagement>

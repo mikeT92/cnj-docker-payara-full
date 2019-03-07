@@ -49,4 +49,4 @@ By default, your application will listen on port 8080 for incoming HTTP traffic.
 
 | Tag(s) | Payara version | Remarks |
 | --- | --- | --- |
-| latest, 0.8.0 | 5.184 | comes with JR8 on Alpine |
+| latest, 0.8.0 | 5.184 | comes with JRE8 on Alpine |

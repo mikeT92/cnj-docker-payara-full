@@ -29,7 +29,7 @@ RUN \
   && echo "adding run user payara to system" \
   && addgroup -S payara && adduser -S payara -G payara \
   && echo "downloading payara tarball from ${PAYARA_PKG_URL}" \
-  && curl --location --silent --output /opt/${PKG_FILE_NAME} ${PAYARA_PKG_URL} \
+  && curl -k --location --silent --output /opt/${PKG_FILE_NAME} ${PAYARA_PKG_URL} \
   && tar -xzf /opt/${PKG_FILE_NAME} -C /opt \
   && rm /opt/${PKG_FILE_NAME} \
   && ln -s ${PAYARA_PATH} /opt/payara \

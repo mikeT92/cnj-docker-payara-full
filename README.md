@@ -1,10 +1,10 @@
-# docker-payara-full
+# cnj-docker-payara-full
 
 Builds a naked Payara Full Profile Server image primarily intended to be extended for 
 application specific configuration.
 
 ## Docker Pull Command
-`docker pull hmfwpncj/docker-payara-full`
+`docker pull hmfwpncj/cnj-docker-payara-full`
 
 ## Usage 
 
@@ -49,4 +49,4 @@ By default, your application will listen on port 8080 for incoming HTTP traffic.
 
 | Tag(s) | Payara version | Remarks |
 | --- | --- | --- |
-| latest, 0.8.0 | 5.184 | comes with JRE8 on Alpine |
+| latest, 1.0.1 | 5.184 | comes with JRE8 on Alpine |

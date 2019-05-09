@@ -2,14 +2,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>edu.hm.cs.fwp.docker</groupId>
-    <artifactId>docker-payara-full</artifactId>
-    <version>0.8.0</version>
+    <artifactId>cnj-docker-payara-full</artifactId>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
     <description>Docker image providing a Payara Full Profile server</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <payara.version>5.184</payara.version>
+        <payara.version>5.191</payara.version>
 		<docker.organization.name>hmfwpcnj</docker.organization.name>
 		<docker.image.name>${docker.organization.name}/${project.artifactId}</docker.image.name>
         <docker.removeMode>all</docker.removeMode>
